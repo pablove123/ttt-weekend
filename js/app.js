@@ -54,9 +54,9 @@ updateMessage()
 function updateBoard(){
   board.forEach( function (ele, i){
     if(ele === 1){
-      squareEls[i].textContent = "O"
+      squareEls[i].textContent = "💖"
     }  else if( ele === -1) {
-      squareEls[i].textContent = "X"
+      squareEls[i].textContent = "❤️"
     } else if (ele === null){
       squareEls[i].textContent = " "
     }
@@ -68,17 +68,17 @@ function updateMessage(){
   
   if (winner === false && tie === false){
     if(turn === 1){
-      return document.querySelector("#message").innerHTML= "It is O's turn"} else {
-        return document.querySelector("#message").innerHTML= "It is X's turn"
+      return document.querySelector("#message").innerHTML= "It is 💖's turn"} else {
+        return document.querySelector("#message").innerHTML= "It is ❤️'s turn"
       }
   } else if (winner === false && tie === true){
     console.log("its a tie")
     return document.querySelector("#message").innerHTML= "It is a tie! Try Again?",scoreBoard.ties++
   } else if (winner === true){
     if(turn === 1){
-      return document.querySelector("#message").innerHTML= "X has won!", document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red", confetti.start(2000),scoreBoard.xWins++} else {
+      return document.querySelector("#message").innerHTML= "❤️ has won!", document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red", confetti.start(2000),scoreBoard.xWins++} else {
 
-      }return document.querySelector("#message").innerHTML= "O has won!",document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red",confetti.start(2000),scoreBoard.oWins++}
+      }return document.querySelector("#message").innerHTML= "💖 has won!",document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red",confetti.start(2000),scoreBoard.oWins++}
       
   }
 
@@ -138,7 +138,7 @@ function switchPlayerTurn(){
   }
 }
 function updateScore(){
-  xwins.textContent= `X: ${scoreBoard.xWins}`
-  owins.textContent= `O: ${scoreBoard.oWins}`
+  xwins.textContent= `❤️: ${scoreBoard.xWins}`
+  owins.textContent= `💖: ${scoreBoard.oWins}`
   ties.textContent = `Ties: ${scoreBoard.ties}`
 }
