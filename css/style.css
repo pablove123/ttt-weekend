@@ -7,6 +7,10 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: aqua;
+  color: yellow; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 section.board {
@@ -14,6 +18,8 @@ section.board {
   grid-template-rows: repeat(3, 10vmin);
   grid-template-columns: repeat(3, 10vmin);
   grid-gap: 0vmin;
+  background-color: blueviolet;
+
 }
 
 div {
@@ -21,4 +27,18 @@ div {
   font-size: 8vmin;
   text-align: center;
   vertical-align: middle;
+}
+button {
+width: 100px;
+margin-top: 50px;
+align-items: center;
+border-radius: 22px;
+}
+
+h1, h2 ,h3 {
+  color: black;
+}
+
+h1{
+  font-size: 40px;
 }
