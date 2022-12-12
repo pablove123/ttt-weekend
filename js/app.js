@@ -24,11 +24,7 @@ const owins = document.getElementById("owins")
 const ties = document.getElementById("ties")
 
 /*----------------------------- Event Listeners ---------------*/
-// squareEls.forEach(function (square, a) {
-  //   square.addEventListener('click', handleClick)
-  //   const sqIdx = square[a]
-  
-  // })
+
   document.querySelector("#reset").addEventListener("click", init)
 
   document.querySelector(".board").addEventListener("click", handleClick)
@@ -48,7 +44,6 @@ function init(){
 function render(){
 updateMessage()
   updateBoard()
-  console.log("board",scoreBoard)
 }
 
 function updateBoard(){
@@ -68,18 +63,18 @@ function updateMessage(){
   
   if (winner === false && tie === false){
     if(turn === 1){
-      return document.querySelector("#message").innerHTML= "It is 💖's turn"} else {
+      return document.querySelector("#message").innerHTML= "It is 💖's turn"} 
+    else {
         return document.querySelector("#message").innerHTML= "It is ❤️'s turn"
       }
   } else if (winner === false && tie === true){
-    console.log("its a tie")
-    return document.querySelector("#message").innerHTML= "It is a tie! Try Again?",scoreBoard.ties++
+      console.log("its a tie")
+      return document.querySelector("#message").innerHTML= "It is a tie! Try Again?",scoreBoard.ties++
   } else if (winner === true){
-    if(turn === 1){
-      return document.querySelector("#message").innerHTML= "❤️ has won!", document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red", confetti.start(2000),scoreBoard.xWins++} else {
-
-      }return document.querySelector("#message").innerHTML= "💖 has won!",document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red",confetti.start(2000),scoreBoard.oWins++}
-      
+      if(turn === 1){
+        return document.querySelector("#message").innerHTML= "❤️ has won!", document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red", confetti.start(2000),scoreBoard.xWins++} 
+    else {
+      }return document.querySelector("#message").innerHTML= "💖 has won!",document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red",confetti.start(2000),scoreBoard.oWins++}     
   }
 
 

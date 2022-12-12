@@ -19,7 +19,6 @@ section.board {
   grid-template-columns: repeat(3, 10vmin);
   grid-gap: 0vmin;
   background-color: blueviolet;
-
 }
 
 div {
@@ -34,7 +33,7 @@ height: 30px;
 margin-top: 50px;
 align-items: center;
 border-radius: 22px;
-background-color: yellow;
+background-color: red;
 cursor: pointer;
 }
 button:last-of-type{
@@ -42,9 +41,10 @@ button:last-of-type{
   height: 30px;
   align-items: center;
   border-radius: 22px;
-  background-color: yellow;
+  background-color: red;
   cursor: pointer;
   margin-top: 10px;
+  font
 }
 
 h1, h2 ,h3 {
@@ -65,8 +65,8 @@ cursor: pointer;
 }
 footer{
   color: black;
-  margin-top: 200px;
-  margin-right: 400px;
+  margin-top: 210px;
+  margin-right: 500px;
   border: 2px solid black; 
   font-size: 30px;
   padding: 10px; 
@@ -79,6 +79,6 @@ span{
 img{
   width: 300px;
   position: absolute;
-  margin-left: 300px;
+  margin-left: 400px;
   margin-top: 220px;
 }
