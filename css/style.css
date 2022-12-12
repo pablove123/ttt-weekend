@@ -28,17 +28,44 @@ div {
   text-align: center;
   vertical-align: middle;
 }
-button {
-width: 100px;
+button:first-of-type{
+width: 150px;
+height: 30px;
 margin-top: 50px;
 align-items: center;
 border-radius: 22px;
+background-color: yellow;
+cursor: pointer;
+}
+button:last-of-type{
+  width: 150px;
+  height: 30px;
+  align-items: center;
+  border-radius: 22px;
+  background-color: yellow;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 h1, h2 ,h3 {
   color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h1{
-  font-size: 40px;
+  font-size: 70px;
+  text-decoration:underline ;
+}
+h2{
+  font-size: 400px;
+}
+.sqr:hover{
+cursor: pointer;
+}
+footer{
+  color: black;
+  margin-top: 40px;
+  border: 2px solid black; 
+  font-size: 30px;
 }

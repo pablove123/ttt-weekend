@@ -11,10 +11,17 @@ let board = [null, null,null,null,null,null,null,null,null ]
 
 let winner = false
 let tie = false
+let scoreBoard = {
+  xWins: 0,
+  oWins: 0,
+  ties: 0
+}
 
 /*------------------------ Cached Element References ----------*/
 
-
+const xwins = document.getElementById("xwins")
+const owins = document.getElementById("owins")
+const ties = document.getElementById("ties")
 
 /*----------------------------- Event Listeners ---------------*/
 // squareEls.forEach(function (square, a) {
@@ -30,17 +37,19 @@ init()
 
 function init(){
     board = [null, null, null, null, null, null, null, null, null]
-    turn = 1
+    turn = -1
     winner = false
     tie = false
+    document.querySelector("h2").style.fontSize = "35px"
+    document.querySelector("h2").style.color = "black"
     render()
 }
 
 function render(){
 updateMessage()
   updateBoard()
+  console.log("board",scoreBoard)
 }
-
 
 function updateBoard(){
   board.forEach( function (ele, i){
@@ -64,12 +73,13 @@ function updateMessage(){
       }
   } else if (winner === false && tie === true){
     console.log("its a tie")
-    return document.querySelector("#message").innerHTML= "It is a tie! Try Again?"
+    return document.querySelector("#message").innerHTML= "It is a tie! Try Again?",scoreBoard.ties++
   } else if (winner === true){
     if(turn === 1){
-      return document.querySelector("#message").innerHTML= "X has won!"} else {
+      return document.querySelector("#message").innerHTML= "X has won!", document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red", confetti.start(2000),scoreBoard.xWins++} else {
 
-      }return document.querySelector("#message").innerHTML= "O has won!"}
+      }return document.querySelector("#message").innerHTML= "O has won!",document.querySelector("h2").style.fontSize = "60px", document.querySelector("h2").style.color = "red",confetti.start(2000),scoreBoard.oWins++}
+      
   }
 
 
@@ -92,7 +102,8 @@ function handleClick(e){
   switchPlayerTurn()
   checkForWinner(sqIdx)
   updateMessage()
-  console.log(board)
+
+  updateScore()
 }
 
 function placePiece(index){
@@ -125,4 +136,9 @@ function switchPlayerTurn(){
     turn = (turn * -1)
     console.log ("swicthed turn", turn)
   }
+}
+function updateScore(){
+  xwins.textContent= `x: ${scoreBoard.xWins}`
+  owins.textContent= `o: ${scoreBoard.oWins}`
+  ties.textContent = `Ties: ${scoreBoard.ties}`
 }
