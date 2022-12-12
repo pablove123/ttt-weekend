@@ -65,7 +65,14 @@ cursor: pointer;
 }
 footer{
   color: black;
-  margin-top: 40px;
+  margin-top: 200px;
+  margin-left: 400px;
   border: 2px solid black; 
   font-size: 30px;
+  padding: 10px; 
+  position: absolute;
+  height: 180px
+}
+span{
+  margin-top: 10px;
 }

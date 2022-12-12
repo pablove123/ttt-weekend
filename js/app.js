@@ -138,7 +138,7 @@ function switchPlayerTurn(){
   }
 }
 function updateScore(){
-  xwins.textContent= `x: ${scoreBoard.xWins}`
-  owins.textContent= `o: ${scoreBoard.oWins}`
+  xwins.textContent= `X: ${scoreBoard.xWins}`
+  owins.textContent= `O: ${scoreBoard.oWins}`
   ties.textContent = `Ties: ${scoreBoard.ties}`
 }
